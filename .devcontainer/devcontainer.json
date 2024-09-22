@@ -19,6 +19,9 @@
   "customizations": {
     "vscode": {
       "settings": {
+        "[ruby]": {
+          "editor.defaultFormatter": "misogi.ruby-rubocop"
+        }
       },
       "extensions": [
         "Shopify.ruby-extensions-pack",
