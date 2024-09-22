@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rake'
 gem 'aws-sdk'
-gem "rexml"
 gem 'pry'
+gem 'rake'
+gem 'rexml'
+gem 'sorbet'
+gem 'ruby-lsp'
