@@ -29,6 +29,12 @@ RUN wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr
    sudo apt update && sudo apt install terraform && \
    terraform -install-autocomplete 
 
+# ecspressoのインストール
+RUN curl -L https://github.com/kayac/ecspresso/releases/download/v2.4.1/ecspresso_2.4.1_linux_amd64.tar.gz -o ecspresso.tar.gz \
+   && tar -zxvf ecspresso.tar.gz -C /usr/local/bin \
+   && chmod +x /usr/local/bin/ecspresso \
+   && rm ecspresso.tar.gz
+
 # 作業ディレクトリの作成と権限設定
 WORKDIR "/workspaces/infra-tools"
 RUN chown vscode:vscode /workspaces/infra-tools
